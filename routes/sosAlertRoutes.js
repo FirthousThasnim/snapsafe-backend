@@ -7,11 +7,12 @@ const {
     updateAlert,
     deleteAlert
 } = require('../controllers/sosAlertController');
+const protect = require('../middleware/authMiddleware');
 
-router.post('/', createAlert);
-router.get('/', getAllAlerts);
-router.get('/:id', getAlertById);
-router.put('/:id', updateAlert);
-router.delete('/:id', deleteAlert);
+router.post('/', protect, createAlert);
+router.get('/', protect, getAllAlerts);
+router.get('/:id', protect, getAlertById);
+router.put('/:id', protect, updateAlert);
+router.delete('/:id', protect, deleteAlert);
 
 module.exports = router;

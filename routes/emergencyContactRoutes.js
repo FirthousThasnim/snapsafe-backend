@@ -7,11 +7,12 @@ const {
     updateContact,
     deleteContact
 } = require('../controllers/emergencyContactController');
+const protect = require('../middleware/authMiddleware');
 
-router.post('/', createContact);
-router.get('/', getAllContacts);
-router.get('/:id', getContactById);
-router.put('/:id', updateContact);
-router.delete('/:id', deleteContact);
+router.post('/', protect, createContact);
+router.get('/', protect, getAllContacts);
+router.get('/:id', protect, getContactById);
+router.put('/:id', protect, updateContact);
+router.delete('/:id', protect, deleteContact);
 
 module.exports = router;

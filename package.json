@@ -9,13 +9,24 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "description": "",
+  "description": "In emergency situations, people struggle to quickly alert their trusted contacts or get help fast. There is no simple system to manage emergency contacts and trigger SOS alerts instantly.",
   "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
     "mongoose": "^9.6.2"
   },
   "devDependencies": {
     "nodemon": "^3.1.14"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FirthousThasnim/snapsafe-backend.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FirthousThasnim/snapsafe-backend/issues"
+  },
+  "homepage": "https://github.com/FirthousThasnim/snapsafe-backend#readme"
 }
